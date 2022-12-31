@@ -1,20 +1,24 @@
 # tower-of-Hanoi
-build with java	11
+Build with java	11, 
 run program as follows:
-java Hanoi.java <1> <2>...<n>. Where n is last and widest disc of the stack.
-or
-javac Hanoi.java
-java Hanoi <1> <2>...<n>
+java Hanoi.java <1> <2>...\<n\>.<br>
+Where n is the last and widest disc of the stack.
 
-example: java Hanoi.java 1 2 3
+Alternative for running program:<br>
+javac Hanoi.java<br>
+java Hanoi <1> <2>...\<n\><br>
+
+Example: java Hanoi.java 1 2 3<br>
 The output shows how the stack must be replaced 
 from A to C following the rules of the game:
-1. move only one disc from the top at the time, 
+1. move only one disc from the top at a time, 
 2. you can not place a wider disc on a smaller one
 The left side is the top of each stack.
 
-output of example:
-Tower height: 3
+Output of example:<br>
+(The left side is the top of each stack)<br>
+<br>
+Tower height: 3<br>
 A: [1, 2, 3]
 B: []
 C: []
