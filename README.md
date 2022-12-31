@@ -13,7 +13,6 @@ The output shows how the stack must be replaced
 from A to C following the rules of the game:
 1. move only one disc from the top at a time, 
 2. you can not place a wider disc on a smaller one
-The left side is the top of each stack.
 
 Output of example:<br>
 (The left side is the top of each stack)<br>
