@@ -70,7 +70,7 @@ class Hanoi {
       System.out.println(locationA);
       System.out.println(locationB);
       System.out.println(locationC);
-      System.out.println("\n");
+      System.out.println();
    }
 }
 

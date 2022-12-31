@@ -19,43 +19,34 @@ Output of example:<br>
 (The left side is the top of each stack)<br>
 <br>
 Tower height: 3<br>
-A: [1, 2, 3]
-B: []
-C: []
-
-
-A: [2, 3]
-B: []
-C: [1]
-
-
-A: [3]
-B: [2]
-C: [1]
-
-
-A: [3]
-B: [1, 2]
-C: []
-
-
-A: []
-B: [1, 2]
-C: [3]
-
-
-A: [1]
-B: [2]
-C: [3]
-
-
-A: [1]
-B: []
-C: [2, 3]
-
-
-A: []
-B: []
-C: [1, 2, 3]
-
-
+A: [1, 2, 3]<br>
+B: []<br>
+C: []<br>
+<br>
+A: [2, 3]<br>
+B: []<br>
+C: [1]<br>
+<br>
+A: [3]<br>
+B: [2]<br>
+C: [1]<br>
+<br>
+A: [3]<br>
+B: [1, 2]<br>
+C: []<br>
+<br>
+A: []<br>
+B: [1, 2]<br>
+C: [3]<br>
+<br>
+A: [1]<br>
+B: [2]<br>
+C: [3]<br>
+<br>
+A: [1]<br>
+B: []<br>
+C: [2, 3]<br>
+<br>
+A: []<br>
+B: []<br>
+C: [1, 2, 3]<br>
