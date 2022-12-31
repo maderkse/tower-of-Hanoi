@@ -1,12 +1,5 @@
-import java.util.Scanner;
 import java.util.ArrayDeque;
-import java.util.StringTokenizer;
-import java.util.Deque;
 import java.util.Arrays;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 
 class Hanoi {
    final static String[] EMPTY = null;
@@ -78,12 +71,12 @@ class Location {
    private String name;
    private ArrayDeque<String> stack;
 
-   public Location(String p_name, String[] p_stack)
+   public Location(String name, String[] stack)
    {
-      this.name = p_name;
-      if (p_stack != null )
+      this.name = name;
+      if (stack != null )
       {
-	 this.stack = new ArrayDeque<String>(Arrays.asList(p_stack));
+	 this.stack = new ArrayDeque<String>(Arrays.asList(stack));
       } else {
 	 this.stack = new ArrayDeque<String>();
       }
