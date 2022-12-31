@@ -1,5 +1,3 @@
-package pac;
-
 import java.util.Scanner;
 import java.util.ArrayDeque;
 import java.util.StringTokenizer;
