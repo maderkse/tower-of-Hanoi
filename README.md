@@ -1,6 +1,6 @@
 # tower-of-Hanoi
 Build with java	11, 
-run program as follows:
+run program as follows:<br>
 java Hanoi.java <1> <2>...\<n\>.<br>
 Where n is the last and widest disc of the stack.
 
