@@ -2,21 +2,19 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 
 class Hanoi {
-   final static String[] EMPTY = null;
+   final static int EMPTY = 0;
    private static Location locationA;
    private static Location locationB;
    private static Location locationC;
+   private static int towerHeight;
 
    public static void main (String[] args) 
    {
-      if (args.length > 0 ) {
-	 System.out.println("Tower height: " + args.length);
+      validateArgs(args);
 
-      } else {
-	 System.out.println("Exception in program call. Syntax: java Hanoi.java n n-1 n-2 ... Where n is an integer.");
-      }
+      System.out.println("Tower height: " + args[0]);
 
-      locationA = new Location("A",args);
+      locationA = new Location("A",towerHeight);
       locationB = new Location("B",EMPTY);
       locationC = new Location("C",EMPTY);
       showLocations();
@@ -24,7 +22,32 @@ class Hanoi {
       solve(locationA
 	    ,locationC
 	    ,locationB,
-	     args.length);
+	    Hanoi.towerHeight);
+
+      System.exit(0);
+   }
+
+   public static void validateArgs(String[] args)
+   {
+      boolean valid = true;
+
+      try
+      {
+	 if (args.length != 1 ) 
+	 {
+	    throw new IllegalArgumentException("One program argument expected instead of: " + args.length);
+	 }
+
+	 Hanoi.towerHeight = Integer.parseInt(args[0]);
+
+      }
+      catch (IllegalArgumentException ex) 
+      {
+	 System.err.println("Error in program call. " + ex.getMessage());
+	 System.err.println("Correct syntax: java Hanoi.java <tower height>");
+	 System.err.println("Where tower height is an integer representing the height of the starting tower.");
+	 System.exit(1);
+      }
    }
 
    public static void solve(Location towerOldLocation
@@ -69,16 +92,14 @@ class Hanoi {
 
 class Location {
    private String name;
-   private ArrayDeque<String> stack;
+   private ArrayDeque<Integer> stack = new ArrayDeque<>();
 
-   public Location(String name, String[] stack)
+   public Location(String name, int towerHeight)
    {
       this.name = name;
-      if (stack != null )
+      if (towerHeight > 0 )
       {
-	 this.stack = new ArrayDeque<String>(Arrays.asList(stack));
-      } else {
-	 this.stack = new ArrayDeque<String>();
+	 initStack(towerHeight);
       }
    }
 
@@ -87,13 +108,21 @@ class Location {
       return this.name + ": " + this.stack.toString();
    }
 
-   public String pop()
+   public int pop()
    {
       return this.stack.pop();
    }
 
-   public void push(String p_element)
+   public void push(int element)
    {
-      this.stack.push(p_element);
+      this.stack.push(element);
+   }
+
+   private void initStack(int stackHeight)
+   {
+      for (int i = stackHeight; i > 0 ; i--)
+      {
+	 this.stack.push(i);
+      }
    }
 }
